@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		32107E195285E40FC86C65BC /* Pods_Drive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55634993369E9F985C367FD4 /* Pods_Drive.framework */; };
+		D087B56E1D81F7EB00F0D53B /* SettingsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087B56D1D81F7EB00F0D53B /* SettingsTabBarController.swift */; };
+		D087B5701D81F94E00F0D53B /* WaypointsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087B56F1D81F94E00F0D53B /* WaypointsTableViewController.swift */; };
+		D087B5721D81F97A00F0D53B /* VisitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087B5711D81F97A00F0D53B /* VisitsTableViewController.swift */; };
+		D087B5741D82006400F0D53B /* MotionActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087B5731D82006400F0D53B /* MotionActivityTableViewController.swift */; };
 		D0B14EA21D804670006AE257 /* MotionActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B14EA11D804670006AE257 /* MotionActivity.swift */; };
 		D0B14EA41D80473E006AE257 /* LocationVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B14EA31D80473E006AE257 /* LocationVisit.swift */; };
 		D0B14EA61D809A16006AE257 /* LocationWayPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B14EA51D809A16006AE257 /* LocationWayPoint.swift */; };
@@ -23,6 +27,10 @@
 /* Begin PBXFileReference section */
 		2B559D588137A5CE9D305010 /* Pods-Drive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drive.release.xcconfig"; path = "Pods/Target Support Files/Pods-Drive/Pods-Drive.release.xcconfig"; sourceTree = "<group>"; };
 		55634993369E9F985C367FD4 /* Pods_Drive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Drive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D087B56D1D81F7EB00F0D53B /* SettingsTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTabBarController.swift; sourceTree = "<group>"; };
+		D087B56F1D81F94E00F0D53B /* WaypointsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointsTableViewController.swift; sourceTree = "<group>"; };
+		D087B5711D81F97A00F0D53B /* VisitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitsTableViewController.swift; sourceTree = "<group>"; };
+		D087B5731D82006400F0D53B /* MotionActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionActivityTableViewController.swift; sourceTree = "<group>"; };
 		D0B14EA11D804670006AE257 /* MotionActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionActivity.swift; path = Model/MotionActivity.swift; sourceTree = "<group>"; };
 		D0B14EA31D80473E006AE257 /* LocationVisit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationVisit.swift; path = Model/LocationVisit.swift; sourceTree = "<group>"; };
 		D0B14EA51D809A16006AE257 /* LocationWayPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationWayPoint.swift; path = Model/LocationWayPoint.swift; sourceTree = "<group>"; };
@@ -99,6 +107,10 @@
 				D0FC4FF91D7E0E0D00103F3F /* LaunchScreen.storyboard */,
 				D0FC4FFC1D7E0E0D00103F3F /* Info.plist */,
 				D0B14EA91D80A123006AE257 /* DataStore.swift */,
+				D087B56D1D81F7EB00F0D53B /* SettingsTabBarController.swift */,
+				D087B56F1D81F94E00F0D53B /* WaypointsTableViewController.swift */,
+				D087B5711D81F97A00F0D53B /* VisitsTableViewController.swift */,
+				D087B5731D82006400F0D53B /* MotionActivityTableViewController.swift */,
 			);
 			path = Drive;
 			sourceTree = "<group>";
@@ -240,11 +252,15 @@
 			files = (
 				D0B14EAA1D80A123006AE257 /* DataStore.swift in Sources */,
 				D0B14EA21D804670006AE257 /* MotionActivity.swift in Sources */,
+				D087B56E1D81F7EB00F0D53B /* SettingsTabBarController.swift in Sources */,
 				D0FC4FF31D7E0E0D00103F3F /* ViewController.swift in Sources */,
 				D0B14EA61D809A16006AE257 /* LocationWayPoint.swift in Sources */,
 				D0B14EA81D809EBF006AE257 /* GPSError.swift in Sources */,
 				D0B14EA41D80473E006AE257 /* LocationVisit.swift in Sources */,
+				D087B5741D82006400F0D53B /* MotionActivityTableViewController.swift in Sources */,
 				D0FC4FF11D7E0E0D00103F3F /* AppDelegate.swift in Sources */,
+				D087B5701D81F94E00F0D53B /* WaypointsTableViewController.swift in Sources */,
+				D087B5721D81F97A00F0D53B /* VisitsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +374,7 @@
 			baseConfigurationReference = EA8E98577D204D0129C0DAE1 /* Pods-Drive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				INFOPLIST_FILE = Drive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.milkshakehq.Drive;
@@ -372,7 +388,7 @@
 			baseConfigurationReference = 2B559D588137A5CE9D305010 /* Pods-Drive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 12;
 				INFOPLIST_FILE = Drive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.milkshakehq.Drive;

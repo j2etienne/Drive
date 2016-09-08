@@ -21,6 +21,7 @@ class ViewController: UITableViewController {
     private let motionSensor: CMMotionActivityManager = CMMotionActivityManager()
     private var data: [Activity] = [Activity]()
     private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+    @IBOutlet var activityIndicatorButton: UIBarButtonItem!
     private let formatter = NSDateFormatter()
     private var latestActivityType: String?
 
@@ -42,6 +43,9 @@ class ViewController: UITableViewController {
         locationManger.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManger.distanceFilter = kCLDistanceFilterNone
         locationManger.delegate = self
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicatorButton.customView = activityIndicator
         
         let motionActivities = DataStore.sharedInstance.objects(MotionActivity.self)
         
@@ -79,7 +83,6 @@ class ViewController: UITableViewController {
             motionSensor.startActivityUpdatesToQueue(NSOperationQueue.mainQueue()) { data in
                 
                 self.navigationItem.leftBarButtonItems = [(self.navigationItem.leftBarButtonItems?.first)!, UIBarButtonItem(barButtonSystemItem: .Trash, target: self, action: #selector(ViewController.clearActivityUpdates(_:)))]
-                self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: self.activityIndicator)
                 self.activityIndicator.startAnimating()
                 
                 if let data = data {
