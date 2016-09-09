@@ -39,6 +39,7 @@ class ViewController: UITableViewController {
         navigationItem.title = "Activity"
         navigationItem.leftBarButtonItems = [UIBarButtonItem(title: "Begin", style: .Plain, target: self, action: #selector(ViewController.toggleLocationUpdates(_:)))]
         
+        locationManger.allowsBackgroundLocationUpdates = true
         locationManger.activityType = .AutomotiveNavigation
         locationManger.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManger.distanceFilter = kCLDistanceFilterNone
